@@ -37,6 +37,7 @@ void *producer(void *arg)
         sem_post(&mutex);
         sem_post(&full);
     }
+    return NULL;
 }
 
 void *consumer(void *arg)
@@ -51,6 +52,7 @@ void *consumer(void *arg)
         sem_post(&empty);
         printf("consumer: get %d\n", tmp);
     }
+    return NULL;
 }
 
 int main(int argc, char *argv[])
