@@ -34,7 +34,7 @@ void rwlock_release_readlock(rwlock_t *rw)
 {
     sem_wait(&rw->lock);
     rw->readers--;
-    if (rw->readers == 1)
+    if (rw->readers == 0)
     {
         sem_post(&rw->writelock); // last reader releases writelock
     }
