@@ -79,7 +79,7 @@ void *writer(void *arg)
 
 int main(int argc, char* argv[])
 {
-    printf("读者写者问题（10个读者，56个写者）\n");
+    printf("读者写者问题（10个读者，5个写者）\n");
     lock = (rwlock_t *) malloc (sizeof(rwlock_t));
     rwlock_init(lock);
     pthread_t read;
