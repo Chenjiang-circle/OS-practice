@@ -55,7 +55,7 @@ void *reader(void *arg)
 {
     // 多个读者去读
     int i;
-    for (i = 0; i < 10; i++)
+    for (i = 0; i < 100; i++)
     {
         rwlock_acquire_readlock(lock);
         printf("I am the %dth reader. There are %d reader ahead of me\n", i, lock->readers);
@@ -84,8 +84,8 @@ int main(int argc, char* argv[])
     rwlock_init(lock);
     pthread_t read;
     pthread_t write;
-    pthread_create(&read, NULL, reader, lock);
-    pthread_create(&write, NULL, writer, lock);
+    pthread_create(&read, NULL, reader, NULL);
+    pthread_create(&write, NULL, writer, NULL);
     pthread_join(read, NULL);
     pthread_join(write, NULL);
 }

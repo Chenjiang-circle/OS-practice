@@ -4,8 +4,6 @@
 #include <semaphore.h>
 
 sem_t forks[5];
-sem_t lock;
-int counter;
 int people[5];
 
 int left(int p)
@@ -55,7 +53,6 @@ int main(int argc, char* argv[])
     {
         sem_init(&forks[i], 0, 1);
     }
-    sem_init(&lock, 0, 1);
     pthread_t p[5];
     
     // 创建线程
