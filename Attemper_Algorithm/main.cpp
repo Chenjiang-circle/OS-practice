@@ -1,10 +1,8 @@
 #include "ReadFile.h"
 
 int main() {
-    vector<Job> jobs = read_file("/Users/chenjiangchao/Code/GitHub/OS-practice/Attemper_Algorithm/test.txt");
+    vector<Job> jobs = read_file("test.txt");
     cout << "main:" << endl;
-    for (vector<Job>::iterator it; it!= jobs.end(); it++)
-        cout << it->job_name << " " << it->come_time << " " << it->serve_time << endl;
     while (!jobs.empty())
     {
         Job job = jobs.back();

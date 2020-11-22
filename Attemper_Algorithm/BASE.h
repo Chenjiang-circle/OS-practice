@@ -9,18 +9,20 @@
 #include <fstream>
 #include <stack>
 #include <queue>
-#include <string>
+#include <string.h>
 #include <vector>
 
 using namespace std;
 
+#define LINE_MAX_LENGTH 1024
+
 typedef struct Job
 {
-    char *job_name; // 作业名
+    char job_name[LINE_MAX_LENGTH]; // 作业名
     int come_time; // 作业到达时间
     int serve_time; // 作业服务时间
 } Job;
 
-#define LINE_MAX_LENGTH 1024
+
 
 #endif //ATTEMPER_ALGORITHM_BASE_H

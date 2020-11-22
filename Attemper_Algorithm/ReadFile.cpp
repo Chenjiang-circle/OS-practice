@@ -24,12 +24,12 @@ vector<Job> read_file(char* file_name)
     // 成功打开之后开始读取数据
     // 忽略第一行数据
     file.getline(line, LINE_MAX_LENGTH);
-    cout << "job_name come_time serve_time" << endl;
+//    cout << "job_name come_time serve_time" << endl;
     while (!file.eof())
     {
         file.getline(line, LINE_MAX_LENGTH);
         Job job = string_to_job(line);
-        cout << job.job_name << " " << job.come_time << " " << job.serve_time << " " << endl;
+//        cout << job.job_name << " " << job.come_time << " " << job.serve_time << " " << endl;
         jobs.push_back(job);
     }
     file.close();
