@@ -67,5 +67,6 @@ int SJF_Algorithm(vector<Job> jobs, char* file_name)
         now += job_tmp.serve_time;
         index = find_short_job(jobs, now);
     }
+    output_file.close();
     return 1;
 }
