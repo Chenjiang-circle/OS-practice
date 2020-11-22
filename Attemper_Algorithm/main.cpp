@@ -1,13 +1,10 @@
 #include "ReadFile.h"
+#include "SortJobs.h"
+#include "FCFS.h"
 
 int main() {
     vector<Job> jobs = read_file("test.txt");
-    cout << "main:" << endl;
-    while (!jobs.empty())
-    {
-        Job job = jobs.back();
-        cout << job.job_name << " " << job.come_time << " " << job.serve_time << endl;
-        jobs.pop_back();
-    }
+    queue<Job> jobs_queue = sort_jobs(jobs);
+    FCFS_Algorithm(jobs_queue, "fcfs_result.txt");
     return 0;
 }
