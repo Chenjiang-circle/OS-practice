@@ -22,6 +22,7 @@ typedef struct Job
     char job_name[LINE_MAX_LENGTH]; // 作业名
     int come_time; // 作业到达时间
     int serve_time; // 作业服务时间
+    bool over = false; // 是否完成作业
 } Job;
 
 
