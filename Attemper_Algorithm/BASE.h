@@ -16,6 +16,7 @@
 using namespace std;
 
 #define LINE_MAX_LENGTH 1024
+#define MAX 2147483647
 
 typedef struct Job
 {
