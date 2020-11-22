@@ -38,5 +38,6 @@ int FCFS_Algorithm(queue<Job> jobs, char* file_out_name)
         output_file << job.job_name << "\t" << job.come_time << "\t" << job.serve_time << "\t" << end_time << "\t" << all_time << "\t" << weight_all_time << endl;
         jobs.pop();
     }
+    output_file.close();
     return 1;
 }

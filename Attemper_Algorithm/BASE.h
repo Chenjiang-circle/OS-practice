@@ -10,6 +10,7 @@
 #include <stack>
 #include <queue>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -19,5 +20,7 @@ typedef struct Job
     int come_time; // 作业到达时间
     int serve_time; // 作业服务时间
 } Job;
+
+#define LINE_MAX_LENGTH 1024
 
 #endif //ATTEMPER_ALGORITHM_BASE_H
