@@ -23,6 +23,8 @@ typedef struct Job
     char job_name[LINE_MAX_LENGTH]; // 作业名
     int come_time; // 作业到达时间
     int serve_time; // 作业服务时间
+    int start_time = -1; // 作业开始时间（用于SRT算法）
+    int remain_time = 0; // 剩余作业时间（用于SRT算法）
     bool over = false; // 是否完成作业
 } Job;
 

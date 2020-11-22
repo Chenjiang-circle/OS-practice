@@ -13,7 +13,7 @@
  * @param now_time 现在时间
  * @return 作业索引
  */
-int find_shortest_serve_time_job(vector<Job> jobs, int now_time);
+int find_shortest_remain_time_job(vector<Job> jobs, int now_time);
 
 /**
  * 最短剩余时间调度算法
