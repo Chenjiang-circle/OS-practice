@@ -28,13 +28,13 @@ int find_HRR_job(vector<Job> jobs, int now_time)
     int index = 0; // 当前索引
     int hrr_index = -1; // 最高响应比作业对应的索引
     vector<Job>::iterator it;
-    cout << "now_time: " << now_time << endl;
+//    cout << "now_time: " << now_time << endl;
     for (it = jobs.begin(); it != jobs.end(); it++)
     {
         if (!it->over && it->come_time <= now_time)
         {
             int hrr_tmp = computer_response_ratio(jobs[index], now_time);
-            cout << jobs[index].job_name << "的响应比为：" << hrr_tmp << endl;
+//            cout << jobs[index].job_name << "的响应比为：" << hrr_tmp << endl;
             if (hrr_tmp > hrr)
             {
                 hrr = hrr_tmp;
