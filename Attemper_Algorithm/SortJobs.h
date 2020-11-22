@@ -28,7 +28,7 @@ bool compare_jobs_by_serve_time(Job a, Job b);
  * @param jobs 作业列表
  * @return 按照到达时间排序的作业队列
  */
-queue<Job> sort_jobs(vector<Job> jobs);
+vector<Job> sort_jobs(vector<Job> jobs);
 
 
 #endif //ATTEMPER_ALGORITHM_SORTJOBS_H

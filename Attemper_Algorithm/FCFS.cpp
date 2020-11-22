@@ -10,7 +10,7 @@
  * @param file_out_name 作业调度结果的输出流
  * @return 成功返回1；否则返回0
  */
-int FCFS_Algorithm(queue<Job> jobs, char* file_out_name)
+int FCFS_Algorithm(vector<Job> jobs, char* file_out_name)
 {
     Job job;
     int begin_time = 0; // 作业开始时间
@@ -27,17 +27,28 @@ int FCFS_Algorithm(queue<Job> jobs, char* file_out_name)
         return 0;
     }
     output_file << "作业\t到达时间\t服务时间\t开始时间\t结束时间\t周转时间\t加权周转时间" << endl;
-    // 按顺序从队列的头部取出作业
-    while (!jobs.empty())
+    vector<Job>::iterator it;
+    for (it = jobs.begin(); it != jobs.end(); it++)
     {
-        job = jobs.front();
+        strcpy(job.job_name, it->job_name);
+        job.come_time = it->come_time;
+        job.serve_time = it->serve_time;
         begin_time = end_time;
         end_time += job.serve_time;
         all_time = end_time - job.come_time;
-        weight_all_time = (all_time+0.0) / job.serve_time;
+        weight_all_time = (all_time + 0.0) / job.serve_time;
         output_file << job.job_name << "\t\t" << job.come_time << "\t\t" << job.serve_time << "\t\t" << begin_time <<"\t\t" << end_time << "\t\t" << all_time << "\t\t" << weight_all_time << endl;
-        jobs.pop();
     }
+//    while (!jobs.empty())
+//    {
+//        job = jobs.front();
+//        begin_time = end_time;
+//        end_time += job.serve_time;
+//        all_time = end_time - job.come_time;
+//        weight_all_time = (all_time + 0.0) / job.serve_time;
+//        output_file << job.job_name << "\t\t" << job.come_time << "\t\t" << job.serve_time << "\t\t" << begin_time <<"\t\t" << end_time << "\t\t" << all_time << "\t\t" << weight_all_time << endl;
+//        jobs.pop();
+//    }
     output_file.close();
     return 1;
 }

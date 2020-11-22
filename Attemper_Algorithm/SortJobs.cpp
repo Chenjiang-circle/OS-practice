@@ -31,18 +31,9 @@ bool compare_jobs_by_serve_time(Job a, Job b)
  * @param jobs 作业列表
  * @return 按照到达时间排序的作业队列
  */
-queue<Job> sort_jobs(vector<Job> jobs)
+vector<Job> sort_jobs(vector<Job> jobs)
 {
     queue<Job> sorted_jobs;
     sort(jobs.begin(), jobs.end(), compare_jobs_by_come_time);
-    vector<Job>::iterator it;
-    for (it = jobs.begin(); it != jobs.end(); it++)
-    {
-        Job job;
-        strcpy(job.job_name, it->job_name);
-        job.come_time = it->come_time;
-        job.serve_time = it->serve_time;
-        sorted_jobs.push(job);
-    }
-    return sorted_jobs;
+    return jobs;
 }

@@ -13,6 +13,6 @@
  * @param file_out_name 作业调度结果的输出流
  * @return 成功返回1；否则返回0
  */
-int FCFS_Algorithm(queue<Job> jobs, char* file_out_name);
+int FCFS_Algorithm(vector<Job> jobs, char* file_out_name);
 
 #endif //ATTEMPER_ALGORITHM_FCFS_H
