@@ -24,8 +24,10 @@ Job string_to_job(char* str)
         tmp = strtok(NULL, " ");
     }
     // 分割完成之后
-    job.job_name = job_string[0];
+    strcpy(job.job_name, job_string[0]);
     job.come_time = atoi(job_string[1]);
     job.serve_time = atoi(job_string[2]);
+    cout << "job_name com_time serve_time" << endl;
+    cout << job.job_name << " " << job.come_time << " " << job.serve_time << endl;
     return job;
 }
