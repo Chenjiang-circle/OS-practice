@@ -1,7 +1,3 @@
-//
-// Created by 陈江超 on 2020/11/22.
-//
-
 #ifndef ATTEMPER_ALGORITHM_FORMATINPUT_H
 #define ATTEMPER_ALGORITHM_FORMATINPUT_H
 

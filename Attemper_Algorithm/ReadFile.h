@@ -1,7 +1,3 @@
-//
-// Created by 陈江超 on 2020/11/22.
-//
-
 #ifndef ATTEMPER_ALGORITHM_READFILE_H
 #define ATTEMPER_ALGORITHM_READFILE_H
 

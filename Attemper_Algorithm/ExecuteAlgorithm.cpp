@@ -1,7 +1,3 @@
-//
-// Created by 陈江超 on 2020/11/23.
-//
-
 #include "ExecuteAlgorithm.h"
 
 /**
