@@ -2,7 +2,7 @@
 // Created by 陈江超 on 2020/11/22.
 //
 
-#include "ReadFile.h"
+ #include "ReadFile.h"
 
 /**
  * 读取文件
@@ -28,6 +28,7 @@ vector<Job> read_file(char* file_name)
     while (!file.eof())
     {
         file.getline(line, LINE_MAX_LENGTH);
+        // 格式化操作
         Job job = string_to_job(line);
 //        cout << job.job_name << " " << job.come_time << " " << job.serve_time << " " << endl;
         jobs.push_back(job);

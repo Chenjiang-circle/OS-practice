@@ -39,16 +39,6 @@ int FCFS_Algorithm(vector<Job> jobs, char* file_out_name)
         weight_all_time = (all_time + 0.0) / job.serve_time;
         output_file << job.job_name << "\t\t" << job.come_time << "\t\t" << job.serve_time << "\t\t" << begin_time <<"\t\t" << end_time << "\t\t" << all_time << "\t\t" << weight_all_time << endl;
     }
-//    while (!jobs.empty())
-//    {
-//        job = jobs.front();
-//        begin_time = end_time;
-//        end_time += job.serve_time;
-//        all_time = end_time - job.come_time;
-//        weight_all_time = (all_time + 0.0) / job.serve_time;
-//        output_file << job.job_name << "\t\t" << job.come_time << "\t\t" << job.serve_time << "\t\t" << begin_time <<"\t\t" << end_time << "\t\t" << all_time << "\t\t" << weight_all_time << endl;
-//        jobs.pop();
-//    }
     output_file.close();
     return 1;
 }

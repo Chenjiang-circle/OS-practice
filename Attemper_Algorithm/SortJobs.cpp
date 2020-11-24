@@ -33,7 +33,7 @@ bool compare_jobs_by_serve_time(Job a, Job b)
  */
 vector<Job> sort_jobs(vector<Job> jobs)
 {
-    queue<Job> sorted_jobs;
+    //queue<Job> sorted_jobs;
     sort(jobs.begin(), jobs.end(), compare_jobs_by_come_time);
     return jobs;
 }
