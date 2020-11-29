@@ -1,9 +1,5 @@
 #include "Algorithm.h"
 
-vector<Job> Algorithm::getJob(string fileName) {
-    return vector<Job>();
-}
-
 bool Algorithm::FCFSAlgorithm(vector<Job> jobs, string fileName) {
     return false;
 }

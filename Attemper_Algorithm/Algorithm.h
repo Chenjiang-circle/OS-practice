@@ -6,13 +6,6 @@
 class Algorithm {
 public:
     /**
-     * 通过文件名获取作业集
-     * @param fileName 存放作业集的文件名
-     * @return 作业集
-     */
-    static vector<Job> getJob(string fileName);
-
-    /**
      * 先来线服务算法
      * @param jobs 按找到达时间顺序排好顺序的作业集
      * @param fileName 输出结果的文件名
