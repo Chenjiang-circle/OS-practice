@@ -1,8 +1,4 @@
-//
-// Created by 陈江超 on 2020/11/22.
-//
-
- #include "ReadFile.h"
+#include "ReadFile.h"
 
 /**
  * 读取文件

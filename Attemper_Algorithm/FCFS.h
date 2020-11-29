@@ -1,7 +1,3 @@
-//
-// Created by 陈江超 on 2020/11/21.
-//
-
 #ifndef ATTEMPER_ALGORITHM_FCFS_H
 #define ATTEMPER_ALGORITHM_FCFS_H
 
