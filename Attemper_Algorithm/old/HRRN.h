@@ -1,7 +1,7 @@
 #ifndef ATTEMPER_ALGORITHM_HRRN_H
 #define ATTEMPER_ALGORITHM_HRRN_H
 
-#include "BASE.h"
+#include "../BASE.h"
 
 /**
  * 计算某个作业的响应比

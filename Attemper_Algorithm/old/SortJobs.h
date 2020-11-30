@@ -1,7 +1,7 @@
 #ifndef ATTEMPER_ALGORITHM_SORTJOBS_H
 #define ATTEMPER_ALGORITHM_SORTJOBS_H
 
-#include "BASE.h"
+#include "../BASE.h"
 
 /**
  * 按照作业到达时间对两个作业进行比较

@@ -1,7 +1,7 @@
 #ifndef ATTEMPER_ALGORITHM_SRT_H
 #define ATTEMPER_ALGORITHM_SRT_H
 
-#include "BASE.h"
+#include "../BASE.h"
 
 /**
  * 在所用未完成且已经到达的作业中，选出服务时间最短的作业的索引

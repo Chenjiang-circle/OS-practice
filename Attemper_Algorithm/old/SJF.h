@@ -1,7 +1,7 @@
 #ifndef ATTEMPER_ALGORITHM_SJF_H
 #define ATTEMPER_ALGORITHM_SJF_H
 
-#include "BASE.h"
+#include "../BASE.h"
 #include "SortJobs.h"
 
 /**

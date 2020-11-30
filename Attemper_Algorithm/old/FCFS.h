@@ -1,7 +1,7 @@
 #ifndef ATTEMPER_ALGORITHM_FCFS_H
 #define ATTEMPER_ALGORITHM_FCFS_H
 
-#include "BASE.h"
+#include "../BASE.h"
 
 /**
  * 先来先服务算法
