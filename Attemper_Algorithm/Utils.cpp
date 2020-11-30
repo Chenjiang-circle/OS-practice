@@ -40,7 +40,7 @@ vector<Job> Utils::getJobsFromFile(string fileName) {
     file.close();
     // 对作业进行排序
     sort(jobs.begin(), jobs.end(), compare_jobs_by_come_time);
-    vector<Job>::iterator it;
+//    vector<Job>::iterator it;
 //    // 调试
 //    for (it = jobs.begin();  it != jobs.end() ; it++) {
 //        cout << it->getJobName();
