@@ -84,6 +84,14 @@ public:
      * @return 成功执行返回true，否则返回false
      */
     static bool preemptiveEDF(vector<Job> jobs, string fileName);
+
+    /**
+     * 最低松弛度优先算法
+     * @param jobs 按到达时间排序的任务集
+     * @param fileName 结果输出文件名
+     * @return 成功执行返回true，否则返回false
+     */
+    static bool LLFAlgorithm(vector<Job> jobs, string fileName);
 };
 
 #endif //ATTEMPER_ALGORITHM_ALGORITHM_H

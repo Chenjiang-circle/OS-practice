@@ -90,13 +90,14 @@ int Utils::choseAlgorithm() {
     cout << "* 8. 抢占式优先级调度算法" << endl;
     cout << "* 9. EDF非抢占式调度方式用于非周期实时任务" << endl;
     cout << "* 10. EDF抢占式调度方式用于周期实时任务" << endl;
+    cout << "* 11. LLF最低松弛度优先算法" << endl;
     cout << "* 请选择想要执行的算法前的数字：";
     int chose;
     cin >> chose;
     return chose;
 }
 
-vector<Job> Utils::getJobsFromFile1(string fileName) {
+vector<Job> Utils::getJobsFromFile1(string fileName, int select) {
     vector<Job> jobs;
     char line[LINE_MAX_LENGTH];
     ifstream file;
@@ -113,7 +114,7 @@ vector<Job> Utils::getJobsFromFile1(string fileName) {
     while (!file.eof())
     {
         file.getline(line, LINE_MAX_LENGTH);
-        Job job(line, 1);
+        Job job(line, select);
         jobs.push_back(job);
     }
     file.close();

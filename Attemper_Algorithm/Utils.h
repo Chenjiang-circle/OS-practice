@@ -27,7 +27,7 @@ public:
      * @param fileName 文件名
      * @return 作业集
      */
-    static vector<Job> getJobsFromFile1(string fileName);
+    static vector<Job> getJobsFromFile1(string fileName, int select);
 
     /**
      * 将作业调度结果输出到文件中
