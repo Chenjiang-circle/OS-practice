@@ -13,6 +13,7 @@ private:
     int remainTime; // 作业剩余时间
     int deadline; // 作业截至时间
     int latestStartTime; // 最晚开始时间
+    int priority; // 优先级
     bool over = false; // 作业是否完成
 public:
     Job(string line);
@@ -25,6 +26,7 @@ public:
     int getDeadline();
     int getLatestStartTime();
     bool getOver();
+    int getPriority();
 
     void setComeTime(int comeTime);
     void setServeTime(int serveTime);
@@ -34,6 +36,7 @@ public:
     void setDeadline(int deadline);
     void setLatestStartTime(int latestStartTime);
     void setOver(bool over);
+    void setPriority(int priority);
 };
 
 

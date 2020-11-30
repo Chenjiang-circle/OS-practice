@@ -75,6 +75,18 @@ Job::Job(string line) {
     comeTime = atoi(strings[1].c_str());
     serveTime = atoi(strings[2].c_str());
     remainTime = serveTime;
+    if (strings.size() == 4)
+    {
+        priority = atoi(strings[3].c_str());
+    }
     over = false;
+}
+
+int Job::getPriority() {
+    return priority;
+}
+
+void Job::setPriority(int priority) {
+    this->priority = priority;
 }
 
