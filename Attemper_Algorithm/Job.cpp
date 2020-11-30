@@ -68,6 +68,27 @@ void Job::setOver(bool over) {
     this->over = over;
 }
 
+int Job::getPriority() {
+    return priority;
+}
+
+void Job::setPriority(int priority) {
+    this->priority = priority;
+}
+
+Job::Job() {
+    jobName = ""; // 作业的名称
+    comeTime = 0; // 作业到达时间
+    serveTime = 0; // 作业服务时间
+    startTime = -1; // 作业开始时间
+    overTime = -1; // 作业结束时间
+    remainTime = 0; // 作业剩余时间
+    deadline = -1; // 作业截至时间
+    latestStartTime = -1; // 最晚开始时间
+    priority = -1; // 优先级
+    over = false;
+}
+
 Job::Job(string line) {
     vector<string> strings;
     strings = stringToken(line, " ");
@@ -79,26 +100,10 @@ Job::Job(string line) {
     {
         priority = atoi(strings[3].c_str());
     }
+    startTime = -1;
+    overTime = -1;
+    deadline = -1;
+    latestStartTime = -1;
     over = false;
-}
-
-int Job::getPriority() {
-    return priority;
-}
-
-void Job::setPriority(int priority) {
-    this->priority = priority;
-}
-
-Job::Job() {
-    jobName = "";
-    comeTime = 0;
-    serveTime = 0;
-    startTime = 0;
-    overTime = 0;
-    remainTime = 0;
-    deadline = 0;
-    latestStartTime = 0;
-    priority = 0;
 }
 

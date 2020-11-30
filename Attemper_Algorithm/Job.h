@@ -14,7 +14,7 @@ private:
     int deadline; // 作业截至时间
     int latestStartTime; // 最晚开始时间
     int priority; // 优先级
-    bool over = false; // 作业是否完成
+    bool over; // 作业是否完成
 public:
     string getJobName();
     int getComeTime();
