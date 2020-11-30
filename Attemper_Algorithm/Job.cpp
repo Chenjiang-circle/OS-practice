@@ -70,7 +70,7 @@ void Job::setOver(bool over) {
 
 Job::Job(string line) {
     vector<string> strings;
-    strings = Utils::stringToken(line, "");
+    strings = stringToken(line, "");
     jobName = strings[0];
     comeTime = atoi(strings[1].c_str());
     serveTime = atoi(strings[2].c_str());

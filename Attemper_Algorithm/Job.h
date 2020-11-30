@@ -2,7 +2,6 @@
 #define ATTEMPER_ALGORITHM_JOB_H
 
 #include "BASE.h"
-#include "Utils.h"
 
 class Job {
 private:

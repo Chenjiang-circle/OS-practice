@@ -1,6 +1,17 @@
 #include "Utils.h"
 
 /**
+ * 定义对Job的比较
+ * @param a
+ * @param b
+ * @return
+ */
+bool compare_jobs_by_come_time(Job a, Job b)
+{
+    return a.getComeTime() < b.getComeTime();
+}
+
+/**
  * 从文件中获取作业集
  * @param fileName 文件名
  * @return 作业集
@@ -26,6 +37,8 @@ vector<Job> Utils::getJobsFromFile(string fileName) {
         jobs.push_back(job);
     }
     file.close();
+    // 对作业进行排序
+    sort(jobs.begin(), jobs.end(), compare_jobs_by_come_time);
     return jobs;
 }
 
@@ -57,20 +70,20 @@ bool Utils::resultToFile(string fileName, queue<Job> jobs) {
     return true;
 }
 
-vector<string> Utils::stringToken(string line, string pattern) {
-    string::size_type pos;
-    vector<string> result;
-    line += pattern;//扩展字符串以方便操作
-    int size = line.size();
-    for (int i = 0; i < size; i++)
-    {
-        pos = line.find(pattern, i);
-        if (pos < size)
-        {
-            string s = line.substr(i, pos - i);
-            result.push_back(s);
-            i = pos + pattern.size() - 1;
-        }
-    }
-    return result;
+
+int Utils::choseAlgorithm() {
+    cout << "============第五组 调度算法============" << endl;
+    cout << "* 0. exit\t退出程序" << endl;
+    cout << "* 1. FCFS\t先来先服务算法" << endl;
+    cout << "* 2. SJF\t最短作业有限算法" << endl;
+    cout << "* 3. HRRN\t最高相应比有限调度算法" << endl;
+    cout << "* 4. RR\t时间片轮转调度算法" << endl;
+    cout << "* 5. SPF\t最短进程调度算法（非抢占式）" << endl;
+    cout << "* 6. SRT\t最短剩余时间调度算法" << endl;
+    cout << "* 7. 非抢占式优先级调度算法" << endl;
+    cout << "* 8. 抢占式优先级调度算法" << endl;
+    cout << "* 请选择想要执行的算法前的数字：";
+    int chose = 0;
+    cin >> chose;
+    return chose;
 }

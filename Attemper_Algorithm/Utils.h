@@ -8,13 +8,12 @@
  */
 class Utils {
 public:
+
     /**
-     * 按某种格式分割字符串
-     * @param line 待分割字符串
-     * @param pattern 分割的模式
-     * @return 返回分割后的字符串集
+     * 在控制台打印用户提示信息，返回用户输入的选择结果
+     * @return 用户输出的选择结果
      */
-    static vector<string> stringToken(string line, string pattern);
+    static int choseAlgorithm();
 
     /**
      * 从文件中获取作业集
