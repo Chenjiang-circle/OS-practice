@@ -33,7 +33,7 @@ vector<Job> Utils::getJobsFromFile(string fileName) {
     while (!file.eof())
     {
         file.getline(line, LINE_MAX_LENGTH);
-        cout << "Utils getJobFromFile: 1" << line << endl;
+//        cout << "Utils getJobFromFile: 1" << line << endl;
         Job job(line);
         jobs.push_back(job);
     }
