@@ -90,3 +90,15 @@ void Job::setPriority(int priority) {
     this->priority = priority;
 }
 
+Job::Job() {
+    jobName = "";
+    comeTime = 0;
+    serveTime = 0;
+    startTime = 0;
+    overTime = 0;
+    remainTime = 0;
+    deadline = 0;
+    latestStartTime = 0;
+    priority = 0;
+}
+

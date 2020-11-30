@@ -16,7 +16,6 @@ private:
     int priority; // 优先级
     bool over = false; // 作业是否完成
 public:
-    Job(string line);
     string getJobName();
     int getComeTime();
     int getServeTime();
@@ -37,6 +36,9 @@ public:
     void setLatestStartTime(int latestStartTime);
     void setOver(bool over);
     void setPriority(int priority);
+
+    Job();
+    Job(string line);
 };
 
 
