@@ -107,3 +107,36 @@ Job::Job(string line) {
     over = false;
 }
 
+Job::Job(string line, int select) {
+    vector<string> strings;
+    strings = stringToken(line, " ");
+    // 如果选择1，表示读取的是EDF算法测试文档
+    if (select == 1)
+    {
+        jobName = strings[0];
+        comeTime = atoi(strings[1].c_str());
+        serveTime = atoi(strings[2].c_str());
+        latestStartTime = atoi(strings[3].c_str());
+        deadline = atoi(strings[4].c_str());
+        remainTime = serveTime;
+        startTime = -1;
+        overTime = -1;
+        priority = -1;
+        over = false;
+    }
+    // 如果选择2，表示读取的是LLF算法的测试文档
+    if (select == 2)
+    {
+        jobName = strings[0];
+        comeTime = atoi(strings[1].c_str());
+        serveTime = atoi(strings[2].c_str());
+        deadline = atoi(strings[3].c_str());
+        startTime = -1;
+        overTime = -1;
+        remainTime = serveTime;
+        latestStartTime = -1;
+        priority = -1;
+        over = false;
+    }
+}
+

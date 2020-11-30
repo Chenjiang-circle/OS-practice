@@ -68,6 +68,22 @@ public:
      * @return 成功执行返回true，否则返回false
      */
     static bool preemptivePrioritySchedulingAlgorithm(vector<Job> jobs, string fileName);
+
+    /**
+     * 非抢占式调度方式用于非周期实时任务
+     * @param jobs 按到达时间排序的任务集
+     * @param fileName 结果输出文件名
+     * @return 成功执行返回true，否则返回false
+     */
+    static bool nonPreemptiveEDF(vector<Job> jobs, string fileName);
+
+    /**
+     * 抢占式调度方式用于周期实时任务
+     * @param jobs 按到达时间排序的任务集
+     * @param fileName 结果输出文件名
+     * @return 成功执行返回true，否则返回false
+     */
+    static bool preemptiveEDF(vector<Job> jobs, string fileName);
 };
 
 #endif //ATTEMPER_ALGORITHM_ALGORITHM_H

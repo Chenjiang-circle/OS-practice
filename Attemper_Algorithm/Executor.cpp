@@ -66,6 +66,20 @@ int Executor::exe(int chose) {
             cin >> outputFileName;
             jobs = Utils::getJobsFromFile(fileName);
             return Algorithm::preemptivePrioritySchedulingAlgorithm(jobs, outputFileName) ? 1 : -1;
+        case 9:
+            cout << "请输入文件名：";
+            cin >> fileName;
+            cout << "请输入输出文件名：";
+            cin >> outputFileName;
+            jobs = Utils::getJobsFromFile1(fileName);
+            return Algorithm::nonPreemptiveEDF(jobs, outputFileName) ? 1 : -1;
+        case 10:
+            cout << "请输入文件名：";
+            cin >> fileName;
+            cout << "请输入输出文件名：";
+            cin >> outputFileName;
+            jobs = Utils::getJobsFromFile1(fileName);
+            return Algorithm::preemptiveEDF(jobs, outputFileName) ? 1 : -1;
         default:
             cout << "输入不合法" << endl;
             return -1;

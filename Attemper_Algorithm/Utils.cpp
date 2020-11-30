@@ -88,8 +88,37 @@ int Utils::choseAlgorithm() {
     cout << "* 6. SRT\t最短剩余时间调度算法" << endl;
     cout << "* 7. 非抢占式优先级调度算法" << endl;
     cout << "* 8. 抢占式优先级调度算法" << endl;
+    cout << "* 9. EDF非抢占式调度方式用于非周期实时任务" << endl;
+    cout << "* 10. EDF抢占式调度方式用于周期实时任务" << endl;
     cout << "* 请选择想要执行的算法前的数字：";
     int chose;
     cin >> chose;
     return chose;
+}
+
+vector<Job> Utils::getJobsFromFile1(string fileName) {
+    vector<Job> jobs;
+    char line[LINE_MAX_LENGTH];
+    ifstream file;
+    file.open(fileName, ios::in);
+    // 判断是否成功打开文件
+    if (!file.is_open())
+    {
+        cout << "can not open the file: " << fileName << endl;
+        return jobs;
+    }
+    // 成功打开之后开始读取数据
+    // 忽略第一行数据
+    file.getline(line, LINE_MAX_LENGTH);
+    while (!file.eof())
+    {
+        file.getline(line, LINE_MAX_LENGTH);
+        Job job(line, 1);
+        jobs.push_back(job);
+    }
+    file.close();
+    // 对作业进行排序
+    sort(jobs.begin(), jobs.end(), compare_jobs_by_come_time);
+    vector<Job>::iterator it;
+    return jobs;
 }

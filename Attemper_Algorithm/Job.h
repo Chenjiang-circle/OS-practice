@@ -39,6 +39,7 @@ public:
 
     Job();
     Job(string line);
+    Job(string line, int select);
 };
 
 

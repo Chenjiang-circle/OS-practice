@@ -23,6 +23,13 @@ public:
     static vector<Job> getJobsFromFile(string fileName);
 
     /**
+     * 从文件中获取作业集（用于EDF和LLF算法）
+     * @param fileName 文件名
+     * @return 作业集
+     */
+    static vector<Job> getJobsFromFile1(string fileName);
+
+    /**
      * 将作业调度结果输出到文件中
      * @param fileName 输出文件名
      * @param jobs 作业调度顺序集
