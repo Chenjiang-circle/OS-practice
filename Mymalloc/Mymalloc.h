@@ -6,9 +6,9 @@
 #define MYMALLOC_MYMALLOC_H
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <stddef.h>
 
 #define BLOCK_SIZE 24
 
@@ -33,7 +33,7 @@ void *first_block = NULL;
  * @param size 空间大小
  * @return 如果找到了符合要求的block就返回block的起始地址，如果找不到就返回NULL
  */
-t_block find_block(t_block *last, size_t size);
+t_block find_block(t_block last, size_t size);
 
 /**
  * 开辟新的block
@@ -83,7 +83,7 @@ int valid_addr(void *p);
  * @param b 欲合并的block
  * @return 返回b的首地址
  */
-t_block fusion_block(t_block b);
+t_block fusion_block(t_block block);
 
 /**
  * 释放地址空间

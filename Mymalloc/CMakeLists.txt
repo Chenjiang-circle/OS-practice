@@ -3,4 +3,4 @@ project(Mymalloc C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Mymalloc main.c Mymalloc.h Mymalloc.cpp)
+add_executable(Mymalloc main.c Mymalloc.h Mymalloc.c)
